@@ -1,0 +1,51 @@
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Εισάγετε έναν αριθμό: ");
+        int number = int.Parse(Console.ReadLine());
+        string reversedDigits = "";
+
+        while (number > 0) {
+            reversedDigits += (number % 10).ToString();
+            number /= 10;
+        }
+
+        Console.WriteLine("Ψηφία αντίστροφα: " + reversedDigits);
+    }
+}
+
+παραδειγμα δευτερο
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
+
+
+
+
+public class Program
+{
+    //Άσκηση 1: Εύρεση και Αντιστροφή Ψηφίων
+
+   // Ζητούμενο: Γράψτε ένα πρόγραμμα που διαβάζει έναν αριθμό από τον χρήστη και εμφανίζει τα ψηφία του σε αντίστροφη σειρά.
+
+    static void Main(string[] args)
+    {
+
+        Console.Write("Enter a number: ");
+        string userInput = Console.ReadLine();
+
+        
+
+        // char[] digits = userInput.ToCharArray();
+        //  Array.Reverse(digits);
+
+        // Console.WriteLine("Reversed digits: " + new string(digits));
+        Console.ReadKey();
+      
+        }
+    }
+

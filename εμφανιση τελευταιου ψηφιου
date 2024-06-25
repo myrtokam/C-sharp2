@@ -1,0 +1,27 @@
+public class Program
+{
+    static void Main(string[] args)
+    {
+        //εμφανιση τελευταιου ψηφιου
+
+       
+        int x = 131423;
+        // int y = 65656;
+        // int z = 596898;
+       
+
+        while (x > 0)
+        {
+            int digit = x % 10;
+            
+            Console.WriteLine(digit);
+            break;
+        }
+
+
+
+        Console.WriteLine();
+
+        Console.ReadKey();
+    }
+}

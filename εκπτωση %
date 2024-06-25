@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
+
+
+
+
+public class Program
+{
+    //Εμφάνιση Άρτιων Ψηφίων
+
+
+    static void Main(string[] args)
+    {
+        //Ο ιδιοκτήτης ενός καταστήματος ρούχων αποφάσισε να πραγματοποιήσει έκπτωση 20% σε όλα τα προϊόντα.
+        //Να γράψετε πρόγραμμα το οποίο θα δέχεται ως είσοδο την αρχική τιμή του προϊόντος και θα εμφανίζει την τελική του τιμή , αφού πραγματοποιήσει την έκπτωση.
+        int number1 = 13;
+        int number2 = 313;
+        int discpimt = number1 * 20 / 100;
+        int discount2=number2 * 20 / 100;
+
+        while (number1 > 0 && number2 > 0)
+        {
+            int result1 = discpimt;
+            int result2 = discount2;
+
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
+            break;
+        }
+
+
+        
+
+
+            Console.WriteLine();
+            Console.ReadLine();
+
+        
+    }
+}
+      
+   

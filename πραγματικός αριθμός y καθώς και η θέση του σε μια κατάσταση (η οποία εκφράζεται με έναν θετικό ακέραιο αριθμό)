@@ -1,0 +1,17 @@
+
+Διαβάζεται ένας πραγματικός αριθμός y καθώς και η θέση του σε μια κατάσταση (η οποία εκφράζεται με έναν θετικό ακέραιο αριθμό). Να εκτυπωθεί επακριβώς η παρακάτω φράση: «Για την μεταβλητή (η θέση του): y = (η τιμή του)».
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΤΙΜΗ ΤΟΥ ΑΡΙΘΜΟΥ ΚΑΙ ΤΗ ΘΕΣΗ ΤΟΥ");
+        double y = Convert.ToDouble(Console.ReadLine());
+        int θεση = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Για την μεταβλητή: {θεση} y = {y}");
+    }
+}

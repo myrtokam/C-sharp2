@@ -1,0 +1,21 @@
+// Να δημιουργηθεί πρόγραμμα το οποίο θα δέχεται έναν πραγματικό αριθμό και θα υπολογίζει το ακέραιο μέρος του
+
+Λύση
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΕΝΑΝ ΑΡΙΘΜΟ");
+        double αριθμος = Convert.ToDouble(Console.ReadLine());
+        int ακεραιοΜερος = (int)αριθμος;
+        Console.WriteLine("ΤΟ ΑΚΕΡΑΙΟ ΜΕΡΟΣ ΤΟΥ " + αριθμος + " ΕΙΝΑΙ ΤΟ: " + ακεραιοΜερος);
+    }
+}
+
+
+

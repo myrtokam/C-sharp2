@@ -1,0 +1,47 @@
+Να αναπτύξετε πρόγραμμα το οποίο θα δέχεται το μήκος της ακτίνας (R) ενός κύκλου και θα υπολογίζει το μήκος της περιμέτρου του (L = 2πR) και το εμβαδό του (EMB = πR^2).
+
+πρωτη λυση
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        const double π = 3.14;
+        Console.WriteLine("ΔΩΣΕ ΤΟ ΜΗΚΟΣ ΤΗΣ ΑΚΤΙΝΑΣ");
+        double ακτινα = Convert.ToDouble(Console.ReadLine());
+        double περιμετρος = 2 * π * ακτινα;
+        double εμβαδον = π * ακτινα * ακτινα;
+        Console.WriteLine("Η ΠΕΡΙΜΕΤΡΟΣ ΤΟΥ ΚΥΚΛΟΥ ΕΙΝΑΙ: " + περιμετρος);
+        Console.WriteLine("ΤΟ ΕΜΒΑΔΟ ΤΟΥ ΚΥΚΛΟΥ ΕΙΝΑΙ: " + εμβαδον);
+    }
+}
+
+δευτερη λυση
+
+
+using System;
+
+
+//Να αναπτύξετε πρόγραμμα το οποίο θα δέχεται το μήκος της ακτίνας (R) ενός κύκλου και θα υπολογίζει το μήκος της περιμέτρου του (L = 2πR) και το εμβαδό του (EMB = πR^2).
+
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΕΝΑΝ ΠΡΑΓΜΑΤΙΚΟ ΑΚΕΡΑΙΟ ΑΡΙΘΜΟ"); 
+        double number = Convert.ToDouble(Console.ReadLine());
+        double p= 3.14;
+        double aktina = 2 * p;
+        double emvado = p * (number* number);
+
+
+        Console.WriteLine("Για την ακτινα το αποτελεσμα είναι: " + aktina);
+        Console.WriteLine("Για την ακτινα το αποτελεσμα είναι: " + emvado);
+
+        Console.ReadLine();
+    }
+}
+

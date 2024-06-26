@@ -1,0 +1,17 @@
+Να πραγματοποιήσετε πρόγραμμα το οποίο θα δέχεται ένα ακέραιο αριθμό και εμφανίζει τον προηγούμενό του και τον επόμενό του.
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΕΝΑΝ ΑΚΕΡΑΙΟ ΑΡΙΘΜΟ");
+        int αριθμος = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ο ΠΡΟΗΓΟΥΜΕΝΟΣ ΕΙΝΑΙ Ο: " + (αριθμος - 1));
+        Console.WriteLine("Ο ΕΠΟΜΕΝΟΣ ΕΙΝΑΙ Ο: " + (αριθμος + 1));
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+
+
+//Να δημιουργηθεί πρόγραμμα το οποίο θα δέχεται έναν πραγματικό αριθμό και θα υπολογίζει το ακέραιο μέρος του.
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΤΙΜΗ ΕΝΟΣ ΠΡΑΓΜΑΤΙΚΟΥ ΑΡΙΘΜΟΥ");
+        double number = Convert.ToDouble(Console.ReadLine());
+        double akeraio = (int)number;
+        
+        Console.WriteLine("Η ΤΙΜΗ ΣΕ ΔΟΛΛΑΡΙΑ ΕΙΝΑΙ: " + akeraio);
+        Console.ReadLine();
+    }
+}
+
+
+
+
+

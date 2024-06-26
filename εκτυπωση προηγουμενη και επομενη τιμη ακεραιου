@@ -1,0 +1,24 @@
+
+using System;
+
+
+//Να πραγματοποιήσετε πρόγραμμα το οποίο θα δέχεται ένα ακέραιο αριθμό και εμφανίζει τον προηγούμενό του και τον επόμενό του.
+
+
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΕΝΑΝ ΑΚΕΡΑΙΟ ΑΡΙΘΜΟ"); 
+        double number = Convert.ToInt32(Console.ReadLine());
+        double metatropi = number - 1;
+        double metatropi2 = number + 1;
+       
+
+        Console.WriteLine("Η ΤΙΜΗ ΣΕ farenait ΕΙΝΑΙ: " + metatropi);
+        Console.WriteLine("Η ΤΙΜΗ ΣΕ farenait ΕΙΝΑΙ: " + metatropi2);
+        Console.ReadLine();
+    }
+}
+

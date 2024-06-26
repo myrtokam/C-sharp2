@@ -1,0 +1,19 @@
+
+using System;
+
+
+//Να δημιουργήσετε πρόγραμμα το οποίο θα δέχεται μια τιμή σε ευρώ και θα την μετατρέπει σε δραχμές. ( Δίνεται η ισοτιμία 1€ = 340,75 ΔΡΧ).
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΤΙΜΗ ΣΕ ΕΥΡΩ");
+        double euro = Convert.ToDouble(Console.ReadLine());
+        double dollars = 2;
+        double isotimia = dollars * 340.75;
+        Console.WriteLine("Η ΤΙΜΗ ΣΕ ΔΟΛΛΑΡΙΑ ΕΙΝΑΙ: " + isotimia);
+        Console.ReadLine();
+    }
+}
+

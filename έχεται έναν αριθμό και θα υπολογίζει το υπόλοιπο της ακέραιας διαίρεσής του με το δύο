@@ -1,0 +1,60 @@
+Να πραγματοποιηθεί πρόγραμμα το οποίο θα δέχεται έναν αριθμό και θα υπολογίζει το υπόλοιπο της ακέραιας διαίρεσής του με το δύο.
+
+
+Λύση
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΕΝΑΝ ΑΚΕΡΑΙΟ ΑΡΙΘΜΟ");
+        int αριθμος = Convert.ToInt32(Console.ReadLine());
+        int υπολοιπο = αριθμος % 2;
+        Console.WriteLine("ΤΟ ΥΠΟΛΟΙΠΟ ΤΗΣ ΑΚΕΡΑΙΑΣ ΔΙΑΙΡΕΣΗΣ ΤΟΥ ΜΕ ΤΟ 2 ΕΙΝΑΙ: " + υπολοιπο);
+    }
+}
+
+Λύση 2
+
+
+using System;
+using Microsoft.VisualBasic;
+
+
+// Να πραγματοποιηθεί πρόγραμμα το οποίο θα δέχεται έναν αριθμό και θα υπολογίζει το υπόλοιπο της ακέραιας διαίρεσής του με το δύο.
+
+
+
+
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("δωσε εναν ακεραιο για διαιρεση");
+        double divisionNumber=Convert.ToDouble(Console.ReadLine());
+
+        double result = divisionNumber % 2;
+
+        while (result > 0)
+        {
+            Console.WriteLine(result);
+            break;
+        }
+        
+
+        Console.WriteLine(" το αποτελεσμα είναι: "+ result); 
+       //console.WriteLine("το  αποτελεσμα είναι: " );
+
+
+        Console.ReadLine();
+    }
+}
+
+
+
+

@@ -1,0 +1,69 @@
+Υπολογισμός κόστους βενζίνης. Να αναπτύξετε πρόγραμμα το οποίο θα δέχεται ως είσοδο: το κόστος της βενζίνης (€/lt), την κατανάλωση του αυτοκινήτου (lt/km) και την απόσταση που πρόκειται να διανυθεί (km) και θα εμφανίζει το κόστος της βενζίνης για την κάλυψη της συγκεκριμένης διαδρομής.
+
+
+Λύση
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΤΟ ΚΟΣΤΟΣ ΤΟΥ ΚΑΥΣΙΜΟΥ ΑΝΑ ΛΙΤΡΟ");
+        double κοστοςΑναΛιτρο = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΚΑΤΑΝΑΛΩΣΗ ΤΟΥ ΑΥΤΟΚΙΝΗΤΟΥ ΣΤΑ 100 ΚΜ");
+        double καταναλωση = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΑΠΟΣΤΑΣΗ");
+        double αποσταση = Convert.ToDouble(Console.ReadLine());
+        double λιτρα = καταναλωση * αποσταση / 100;
+        double συνολικοΚοστος = λιτρα * κοστοςΑναΛιτρο;
+        Console.WriteLine("ΤΟ ΚΟΣΤΟΣ ΤΟΥ ΚΑΥΣΙΜΟΥ ΘΑ ΕΙΝΑΙ: " + συνολικοΚοστος);
+    }
+}
+
+
+λυση δευτερη
+
+
+using System;
+using Microsoft.VisualBasic;
+
+
+// Υπολογισμός κόστους βενζίνης. Να αναπτύξετε πρόγραμμα το οποίο θα δέχεται ως είσοδο: το κόστος της βενζίνης (€/lt),
+// την κατανάλωση του αυτοκινήτου (lt/km) και την απόσταση που πρόκειται να διανυθεί (km) και θα εμφανίζει το κόστος της βενζίνης για την κάλυψη της συγκεκριμένης διαδρομής.
+
+
+
+
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("δωσε κοστος βενζινης");
+        double fuelCostPerLiter = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("δωσε την καταλανωση του αυτοκινητου σε λιτρα");
+        double katanalosiAutokinitou = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("δωσε την αποσταση του αυτοκινητου σε χιλιομετρα");
+        double distanceTocover = Convert.ToDouble(Console.ReadLine());
+
+
+        double kostosVenzinis = (katanalosiAutokinitou * distanceTocover) / 100;
+        double total = kostosVenzinis * fuelCostPerLiter;
+
+        
+
+        Console.WriteLine(" το αποτελεσμα είναι: "+ total); 
+       //console.WriteLine("το  αποτελεσμα είναι: " );
+
+
+        Console.ReadLine();
+    }
+}
+
+
+

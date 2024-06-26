@@ -1,0 +1,20 @@
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+
+//Να δημιουργήσετε πρόγραμμα το οποίο θα δέχεται μια τιμή σε ευρώ και θα την μετατρέπει σε δραχμές. ( Δίνεται η ισοτιμία 1€ = 340,75 ΔΡΧ).
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("ΔΩΣΕ ΤΗΝ ΤΙΜΗ ΣΕ ΕΥΡΩ");
+        double ευρω = Convert.ToDouble(Console.ReadLine());
+        double δραχμες = ευρω * 340.75;
+        Console.WriteLine("Η ΤΙΜΗ ΣΕ ΔΡΑΧΜΕΣ ΕΙΝΑΙ: " + δραχμες);
+    }
+}

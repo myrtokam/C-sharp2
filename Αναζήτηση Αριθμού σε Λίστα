@@ -1,0 +1,34 @@
+Αναζήτηση Αριθμού σε Λίστα
+Εκφώνηση
+
+Γράψε έναν αλγόριθμο που να ελέγχει αν ένας δεδομένος αριθμός υπάρχει σε μια λίστα και να εκτυπώνει τη θέση του. Αν ο αριθμός δεν υπάρχει στη λίστα, να εκτυπώνει ένα μήνυμα που να λέει ότι ο αριθμός δεν βρέθηκε.
+
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int numberToFind = 5;
+        bool found = false;
+
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            if (numbers[i] == numberToFind)
+            {
+                Console.WriteLine("Ο αριθμός βρέθηκε στη θέση: " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("Ο αριθμός δεν βρέθηκε στη λίστα.");
+        }
+    }
+}

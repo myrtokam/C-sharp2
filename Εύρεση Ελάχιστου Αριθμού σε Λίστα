@@ -1,0 +1,26 @@
+Εύρεση Ελάχιστου Αριθμού σε Λίστα
+
+
+Γράψε έναν αλγόριθμο σε ψευδογλώσσα και τον αντίστοιχο κώδικα σε C# που να βρίσκει τον ελάχιστο αριθμό σε μια λίστα αριθμών και να τον εκτυπώνει.
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 23, 45, 12, 67, 34, 89, 2, 56, 32 };
+        int minNumber = numbers[0];
+
+        foreach (int num in numbers)
+        {
+            if (num < minNumber)
+            {
+                minNumber = num;
+            }
+        }
+
+        Console.WriteLine("Ο ελάχιστος αριθμός είναι: " + minNumber);
+    }
+}

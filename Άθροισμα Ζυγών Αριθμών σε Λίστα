@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practise222
+{
+
+    public class Program
+    {
+
+
+        //Γράψε έναν αλγόριθμο που να υπολογίζει το άθροισμα όλων των ζυγών αριθμών σε μια λίστα αριθμών.
+
+
+        public static void Main(string[] args)
+        {
+
+            //List<int> myList = new List<int>() { 1, 5, 2, 4, 7, 9, 5, 3, 5, 6, 3, 2, 7, 8, 9, 131, 453543, 11313, 464564, 13131, 35435, 546454, 234323342, 13131 };
+
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int sum = 0;
+
+            foreach (int num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sum += num;
+                }
+            }
+
+            Console.WriteLine("Το άθροισμα των ζυγών αριθμών είναι: " + sum);
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+
+    }
+}
+      
+        
+    

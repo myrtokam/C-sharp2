@@ -1,0 +1,20 @@
+//Γράψε έναν αλγόριθμο σε ψευδογλώσσα και τον αντίστοιχο κώδικα σε C# που να αναστρέφει τη σειρά των στοιχείων σε μια λίστα και να εκτυπώνει τη νέα, ανεστραμμένη λίστα.
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        List<int> reversedNumbers = new List<int>();
+
+        for (int i = numbers.Count - 1; i >= 0; i--)
+        {
+            reversedNumbers.Add(numbers[i]);
+        }
+
+        Console.WriteLine("Η ανεστραμμένη λίστα είναι: " + string.Join(", ", reversedNumbers));
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+
+class Fibonacci
+{
+    static void Main()
+    {
+
+        //Να δημιουργηθεί πρόγραμμα το οποίο θα δέχεται έναν τυχαίο αριθμό και θα εξετάζει αν το τελευταίο του ψηφίοείναι το 5.
+
+        Console.WriteLine("give a number");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        if (number > 0)
+        {
+            if (number%10==5)
+            {
+                
+                 
+                Console.WriteLine(number%10);
+            }
+
+        }
+        Console.WriteLine();
+        Console.ReadKey();
+        }
+}
+    
+
+
+
+
+

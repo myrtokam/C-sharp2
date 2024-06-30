@@ -1,0 +1,65 @@
+Ένα κατάστημα στο Internet προσφέρει τα προϊόντα του με τους εξής τρόπους:
+Α. Πληρωμή τοις μετρητής: Έκπτωση 5%
+Β. Πληρωμή σε 6 δόσεις: Άτοκα.
+Γ.Πληρωμή σε 12 δόσεις με 5% τόκο.
+Να δημιουργηθεί  πρόγραμμα το οποίο θα δέχεται την αξία των προϊόντων που αγόρασε κάποιος και τον τρόπο πληρωμής ( Α, Β ή Γ ) και θα εμφανίζει το τελικό κόστος. Στη περίπτωση των δόσεων θα εμφανίζει και το ποσό της κάθε δόσης.
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Δώσε την αξία των προϊόντων:");
+        double totalAmount = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Επέλεξε τρόπο πληρωμής:");
+        Console.WriteLine("Α. Πληρωμή τοις μετρητής (έκπτωση 5%)");
+        Console.WriteLine("Β. Πληρωμή σε 6 δόσεις (άτοκα)");
+        Console.WriteLine("Γ. Πληρωμή σε 12 δόσεις με 5% τόκο");
+
+        char paymentMethod = Console.ReadLine()[0];
+
+        switch (paymentMethod)
+        {
+            case 'Α':
+            case 'α':
+                // Πληρωμή τοις μετρητής με έκπτωση 5%
+                double discountAmountCash = totalAmount * 0.05;
+                double finalAmountCash = totalAmount - discountAmountCash;
+                Console.WriteLine($"Τελικό κόστος (με έκπτωση 5%): {finalAmountCash:C}");
+                break;
+
+            case 'Β':
+            case 'β':
+                // Πληρωμή σε 6 δόσεις (άτοκα)
+                double installmentAmountNoInterest = totalAmount / 6;
+                Console.WriteLine("Τελικό κόστος (6 δόσεις άτοκα):");
+                for (int i = 1; i <= 6; i++)
+                {
+                    Console.WriteLine($"Δόση {i}: {installmentAmountNoInterest:C}");
+                }
+                break;
+
+            case 'Γ':
+            case 'γ':
+                // Πληρωμή σε 12 δόσεις με 5% τόκο
+                double interestRate = 0.05;
+                double totalWithInterest = totalAmount * (1 + interestRate);
+                double installmentAmountWithInterest = totalWithInterest / 12;
+                Console.WriteLine("Τελικό κόστος (12 δόσεις με 5% τόκο):");
+                for (int i = 1; i <= 12; i++)
+                {
+                    Console.WriteLine($"Δόση {i}: {installmentAmountWithInterest:C}");
+                }
+                break;
+
+            default:
+                Console.WriteLine("Μη έγκυρη επιλογή τρόπου πληρωμής.");
+                break;
+        }
+
+        Console.ReadKey();
+    }
+}

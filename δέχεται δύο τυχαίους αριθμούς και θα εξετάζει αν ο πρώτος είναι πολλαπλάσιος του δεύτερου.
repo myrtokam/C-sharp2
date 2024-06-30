@@ -1,0 +1,40 @@
+using System;
+
+class Fibonacci
+{
+    static void Main()
+    {
+
+        //Να δημιουργηθεί  πρόγραμμα το οποίο θα δέχεται δύο τυχαίους αριθμούς και θα εξετάζει
+        //αν ο πρώτος είναι πολλαπλάσιος του δεύτερου.
+
+      
+            Console.WriteLine("Δώσε τον πρώτο αριθμό:");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Δώσε τον δεύτερο αριθμό:");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+
+            if (number1 % number2 == 0)
+            {
+                Console.WriteLine($"{number1} είναι πολλαπλάσιος του {number2}.");
+            }
+            else
+            {
+                Console.WriteLine($"{number1} δεν είναι πολλαπλάσιος του {number2}.");
+            }
+
+            Console.ReadKey();
+        }
+    }
+  
+
+        
+
+    
+    
+
+
+
+
+

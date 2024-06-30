@@ -1,0 +1,77 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Δώσε έναν τυχαίο αριθμό:");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        // Υπολογισμός του άθροισμα των ψηφίων του αριθμού
+        int sumOfDigits = CalculateSumOfDigits(number);
+
+        // Έλεγχος αν το άθροισμα των ψηφίων είναι μεγαλύτερο από 10
+        if (sumOfDigits > 10)
+        {
+            Console.WriteLine($"Το άθροισμα των ψηφίων του αριθμού {number} είναι {sumOfDigits} και είναι μεγαλύτερο από το 10.");
+        }
+        else
+        {
+            Console.WriteLine($"Το άθροισμα των ψηφίων του αριθμού {number} είναι {sumOfDigits} και δεν είναι μεγαλύτερο από το 10.");
+        }
+
+        Console.ReadKey();
+    }
+
+    // Συνάρτηση για υπολογισμό άθροισματος ψηφίων
+    static int CalculateSumOfDigits(int num)
+    {
+        int sum = 0;
+        while (num != 0)
+        {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+}
+
+
+δευτερη προσπαθεια
+
+
+
+using System;
+
+class Fibonacci
+{
+    static void Main()
+    {
+
+        //Να δημιουργηθεί πρόγραμμα το οποίο
+        //θα δέχεται ένα τυχαίο αριθμό και θα εξετάζει αν το άθροισμα των ψηφίων του είναι μεγαλύτερο από το 10..
+
+        Console.WriteLine("give a number");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+
+        int result1 = number % 10;
+        int result2 = number / 10;
+        while (number>=0)
+        {
+            
+
+            int result =result1;
+            int secondresult = result2;
+            int psifiaMazi = result2 + result;
+            Console.WriteLine(result);
+            Console.WriteLine(secondresult);
+            Console.WriteLine(psifiaMazi);
+            break;
+        }
+        
+        Console.WriteLine();
+        Console.ReadKey();
+        }
+}
+    

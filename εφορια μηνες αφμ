@@ -1,0 +1,52 @@
+Σε ανακοίνωσή της η εφορία καλεί όλους τους πολίτες να περάσουν από τα γραφεία της για την εκτέλεση συγκεκριμένης εργασίας. 
+Για να διευκολυνθεί η διαδικασία η σειρά θα καθορίζεται με βάση το ΑΦΜ του κάθε πολίτη ως εξής:
+Αν ο ΑΦΜ λήγει σε 1 ή 2 ο πολίτης οφείλει να περάσει τους μήνες Ιανουάριο ή Φεβρουάριο,
+αν λήγει σε 3 ή 4 τους μήνες Μάρτιο ή Απρίλιο , 
+αν λήγει σε 6 ή 7 τους μήνες Μάιο ή Ιούνιο 
+ενώ οι υπόλοιποι τους μήνες Ιούλιο ή Αύγουστο. 
+Να δημιουργηθεί πρόγραμμα το οποίο θα δέχεται τον ΑΦΜ ενός πολίτη και θα τον ενημερώνει σχετικά με τους μήνες που θα πρέπει να παρουσιαστεί στη εφορία.
+
+
+
+using System;
+
+class Fibonacci
+{
+    static void Main()
+    {
+        Console.WriteLine("Δώσε τον αριθμό του ΑΦΜ σου:");
+
+        int number1 = Convert.ToInt32(Console.ReadLine());
+        int number = number1 % 10;
+
+        switch (number)
+        {
+            case 1:
+            case 2:
+                Console.WriteLine("come to our office January and February");
+                break;
+            case 3:
+            case 4:
+                Console.WriteLine("come to our office March and April");
+                break;
+            case 5:
+            case 6:
+                Console.WriteLine("come to our office May and June");
+                break;
+            case 7:
+            case 8:
+                Console.WriteLine("come to our office July and August");
+                break;
+            case 9:
+            case 0:
+                Console.WriteLine("come to our office November and December");
+                break;
+            default:
+                Console.WriteLine("Invalid AFM number.");
+                break;
+        }
+
+        Console.WriteLine();
+        Console.ReadKey();
+    }
+}

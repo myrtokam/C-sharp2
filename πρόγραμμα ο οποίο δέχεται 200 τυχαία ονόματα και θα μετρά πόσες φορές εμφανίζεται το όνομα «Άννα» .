@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<string> names = new List<string>
+        {
+            "Άννα", "Γιώργος", "Μαρία", "Κώστας", "Ελένη", "Νίκος", "Δημήτρης", "Ιωάννα", "Σοφία", "Παναγιώτης"
+        };
+
+
+        List<string> randomNames = new List<string>();
+        Random random = new Random();
+
+        for (int i = 0; i < 200; i++)
+        {
+            string randomNams=names[random.Next(names.Count)];
+            randomNames.Add(randomNams);
+        }
+
+        int countAnna = 0;
+        foreach(string name in names)
+        {
+            if (name=="Άννα")
+            {
+                countAnna++;
+            }
+        }
+
+
+            Console.WriteLine($"Το όνομα 'Άννα' εμφανίζεται στη λίστα."+countAnna);
+            Console.ReadLine();
+        
+    }
+}
+
+

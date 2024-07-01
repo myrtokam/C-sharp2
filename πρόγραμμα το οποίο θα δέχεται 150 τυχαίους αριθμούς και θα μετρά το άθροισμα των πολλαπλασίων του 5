@@ -1,0 +1,36 @@
+//Να πραγματοποιηθεί πρόγραμμα το οποίο θα δέχεται 150 τυχαίους αριθμούς και θα μετρά το άθροισμα των πολλαπλασίων του 5.
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Βήμα 1: Δημιουργία λίστας για να αποθηκεύσουμε τους τυχαίους αριθμούς
+        List<int> randomNumbers = new List<int>();
+        Random random = new Random();
+
+        // Προσθήκη 150 τυχαίων αριθμών στη λίστα
+        for (int i = 0; i < 150; i++)
+        {
+            int randomNumber = random.Next(1, 101);  // Επιλέγει έναν τυχαίο αριθμό μεταξύ 1 και 100
+            randomNumbers.Add(randomNumber);  // Προσθέτει τον τυχαίο αριθμό στη λίστα randomNumbers
+        }
+
+        // Βήμα 2: Αρχικοποίηση μεταβλητής για το άθροισμα
+        int sumOfMultiplesOfFive = 0;
+
+        // Διέλευση της λίστας και άθροισμα των πολλαπλασίων του 5
+        foreach (int number in randomNumbers)
+        {
+            if (number % 5 == 0)  // Ελέγχει αν ο αριθμός είναι πολλαπλάσιο του 5
+            {
+                sumOfMultiplesOfFive += number;  // Προσθέτει τον αριθμό στο άθροισμα
+            }
+        }
+
+        // Βήμα 3: Εκτύπωση του αποτελέσματος
+        Console.WriteLine($"Το άθροισμα των πολλαπλασίων του 5 είναι: {sumOfMultiplesOfFive}");
+    }
+}

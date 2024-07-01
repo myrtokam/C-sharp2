@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Σε έναν αγώνα δρόμου έλαβαν μέρος 50 αθλητές.
+        // Να πραγματοποιηθεί πρόγραμμα το οποίο θα δέχεται τις επιδόσεις των αθλητών και τα ονόματά τους και θα εμφανίζει το όνομα του νικητή.
+        // Θεωρήστε ότι δεν υπάρχουν αθλητές με τον ίδιο χρόνο.
+
+        List<int> scores = new List<int>();
+        List<string> athleteNames = new List<string>() 
+        { 
+            "Emily Wilson", "Liam Brown", "Ava Lee", "Noah Davis", "Sophia Patel", "Oliver Martin", "Mia Hall", "Benjamin White", "Isabella Garcia", "Alexander Brooks", 
+            "Emily Wilson",  "Liam Brown",     "Ava Lee",     "Noah Davis",     "Sophia Patel",     "Oliver Martin",     "Mia Hall",     "Benjamin White",     "Isabella Garcia",     "Alexander Brooks", 
+            "Julia Thompson",     "Ethan Kim",     "Lily Tran",     "Logan Russell",     "Gabriella Sanchez",     "Caleb Lee",     "Abigail Walker",     "Jaxon Hall",     "Piper Davis",     "Harrison Brown" 
+        };
+
+        Random randomNumbers = new Random();
+
+        for (int i = 0; i < athleteNames.Count; i++)
+        {
+            scores.Add(randomNumbers.Next(1, 100)); // generate a random score between 1 and 100
+        }
+
+        int minScore = scores.Min();
+        int winnerIndex = scores.IndexOf(minScore);
+
+        Console.WriteLine("The winner is " + athleteNames[winnerIndex] + " with a score of " + minScore);
+        Console.ReadLine();
+    }
+}

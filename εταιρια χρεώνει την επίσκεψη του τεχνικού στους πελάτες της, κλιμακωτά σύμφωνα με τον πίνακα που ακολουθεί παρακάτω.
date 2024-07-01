@@ -1,0 +1,46 @@
+        //Μια εταιρία παροχής τεχνικών υπηρεσιών, χρεώνει την επίσκεψη του τεχνικού στους πελάτες της, κλιμακωτά σύμφωνα με τον πίνακα που ακολουθεί παρακάτω.
+        //Να πραγματοποιηθεί πρόγραμμα σε γλώσσα προγραμματισμού ΓΛΩΣΣΑ το οποίο: 
+        //α.Θα δέχεται τις ώρες που παρέμεινε ο τεχνικός στον πελάτη,
+        // β. Θα υπολογίζει το κόστος της επίσκεψης του τεχνικού
+        //γ. θα εμφανίζει το συμολικό ποσό οφειλής του πελάτη .
+
+
+        //Πίνακας Χρέωσης
+        //Ώρες Παραμονής          Κόστος ανα ώρα 
+        // <= 2                     20 € 
+        // <= 4                     15 € 
+        // > 4                      10 €
+
+
+
+
+        public static void Main(string[] args)
+        {
+
+            Console.WriteLine("give working time");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+
+            if (userInput <= 2)
+            {
+                int cost = 20;
+                Console.WriteLine("the cost of the visit is:" + cost + "€ ");
+            }
+            if (userInput <= 4)
+            {
+                int cost = 15;
+                Console.WriteLine("the cost of the visit is:" + cost + "€ ");
+            }
+            if (userInput > 4)
+            {
+                int cost = 10;
+                Console.WriteLine("the cost of the visit is:" + cost + "€ ");
+            }
+
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+    }
+}
+    
+   

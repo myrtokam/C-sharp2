@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practise222
+{
+
+    public class Program
+    {
+
+
+        //Να γίνει πρόγραμμα το οποίο θα δέχεται ως είσοδο το μισθό ενός ατόμου και θα υπολογίζει το φόρο που θα πρέπει να πληρώσει. Ο φόρος εξαρτάται απο το εισόδημα, σύμφωνα με τον παρακάτω πίνακα : 
+       //ισόδημα Φόρος 
+                                    //    <= 700     5%
+                                    //700 < ΕΙΣ <= 1200    15 %
+                                   //200 < ΕΙΣ <= 2000  25 % 
+                                   // > 2000  35 % 
+
+
+
+
+        public static void Main(string[] args)
+        {
+
+            Console.WriteLine("give eisodima");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+            if (userInput <= 700)
+            {
+                int ekptosimisthou = userInput * 5 / 100;
+                int result = userInput - ekptosimisthou;
+                Console.WriteLine(ekptosimisthou + " " + result);
+                Console.WriteLine(result);
+            }
+            else if (userInput >= 100 && userInput <= 1200)
+            {
+                int ekptosimisthou = userInput * 15 / 100;
+                int result = userInput - ekptosimisthou;
+                Console.WriteLine(ekptosimisthou + " " + result);
+                Console.WriteLine(result);
+            }
+            else if (userInput >= 200 && userInput <= 2000)
+            {
+                int ekptosimisthou = userInput * 25 / 100;
+                int result = userInput - ekptosimisthou;
+                Console.WriteLine(ekptosimisthou + " " + result);
+                Console.WriteLine(result);
+            }
+            else
+            {
+                int ekptosimisthou = userInput * 32 / 100;
+                int result = userInput - ekptosimisthou;
+                Console.WriteLine(ekptosimisthou + " " + result);
+                Console.WriteLine(result);
+            }
+
+
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+    }
+}
+    
+   
+
+      
+        
+    
+    

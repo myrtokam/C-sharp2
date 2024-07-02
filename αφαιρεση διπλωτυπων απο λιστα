@@ -1,0 +1,23 @@
+//Γράψε έναν αλγόριθμο σε ψευδογλώσσα και τον αντίστοιχο κώδικα σε C# που να αφαιρεί τα διπλότυπα από μια λίστα αριθμών και να εκτυπώνει τη λίστα χωρίς τα διπλότυπα.
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 3, 2, 1 };
+        List<int> uniqueNumbers = new List<int>();
+
+        foreach (int num in numbers)
+        {
+            if (!uniqueNumbers.Contains(num))
+            {
+                uniqueNumbers.Add(num);
+            }
+        }
+
+        Console.WriteLine("Η λίστα χωρίς διπλότυπα είναι: " + string.Join(", ", uniqueNumbers));
+    }
+}

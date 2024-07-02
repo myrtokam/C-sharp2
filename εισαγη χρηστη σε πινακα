@@ -1,0 +1,21 @@
+    static void Main(string[] args)
+    {
+        Console.WriteLine("give an array of integers");
+        int[] myArray = new int[10];
+        for (int i = 0; i < myArray.Length; i++)
+
+        {
+            myArray[i] = Convert.ToInt32(Console.ReadLine());
+
+        }
+
+        foreach (var items in myArray)
+        {
+            Console.WriteLine("o pinakas soy einai o :" + items);
+
+        }
+
+        Console.ReadKey();
+    }
+   
+}

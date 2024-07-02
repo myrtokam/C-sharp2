@@ -1,0 +1,54 @@
+using System;
+
+namespace askiseisq
+{
+    internal class Program
+    {
+        // Γράψτε ένα πρόγραμμα που να διαβάζει έναν πίνακα ακεραίων από τον χρήστη
+        // και να χρησιμοποιεί τον αλγόριθμο Selection Sort για να τον ταξινομήσει. 
+        // Στη συνέχεια, εμφανίστε τον ταξινομημένο πίνακα
+
+        static void Selection(int[] myArray)
+        {
+            int n = myArray.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                // Υποθέτουμε ότι το ελάχιστο στοιχείο είναι στην τρέχουσα θέση i
+                int minIndex = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (myArray[j] < myArray[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                }
+                // Ανταλλαγή των στοιχείων
+                int temp = myArray[minIndex];
+                myArray[minIndex] = myArray[i];
+                myArray[i] = temp;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Δώστε έναν πίνακα ακεραίων (10 στοιχεία):");
+            int[] myArray = new int[10];
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.Write($"Στοιχείο {i + 1}: ");
+                myArray[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            // Καλούμε τη μέθοδο ταξινόμησης μετά την εισαγωγή όλων των στοιχείων
+            Selection(myArray);
+
+            Console.WriteLine("Ο ταξινομημένος πίνακας είναι:");
+            foreach (var item in myArray)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

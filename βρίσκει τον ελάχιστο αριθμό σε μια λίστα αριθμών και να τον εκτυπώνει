@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+class Programe
+{ 
+    static void Main()
+    {
+        // Γράψε έναν αλγόριθμο σε C# που να βρίσκει τον ελάχιστο αριθμό σε μια λίστα αριθμών και να τον εκτυπώνει.
+
+        List<int> numbers = new List<int> { 23, 45, 12, 67, 34, 89, 2, 56, 32 };
+        int min = numbers[0];
+
+        foreach (int number in numbers)
+        {
+            if (number < min)
+            {
+                min = number;
+            }
+        }
+
+        Console.WriteLine("Ο ελάχιστος αριθμός είναι: " + min);
+        Console.ReadLine();
+    }
+}
+       

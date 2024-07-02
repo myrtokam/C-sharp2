@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Program
+{
+    //Αλγόριθμος Υπολογισμού Αθροίσματος Αριθμών σε Λίστα
+
+
+    static void Main(string[] args)
+    {
+        List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
+        for (int i = 0; i < numbers.Count-1; i++)
+        {
+            bool sum=false;
+            for (int j = 0; j < numbers.Count -i-1; j++)
+            {
+                if (numbers[j] > numbers[i] + 1)
+                {
+                    sum = true;
+                    int temp=numbers[j];
+                    numbers[j] = numbers[j+1];
+                    numbers[j+1] = temp;
+                    
+                }
+            }
+        }
+
+            Console.WriteLine("Maximum number: "+numbers.Sum() );
+            Console.ReadLine();
+        }
+    }

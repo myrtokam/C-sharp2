@@ -1,0 +1,68 @@
+using System;
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
+using Microsoft.VisualBasic;
+
+
+
+class Program
+{
+    private static object program;
+
+    // Γράψτε ένα πρόγραμμα που να διαβάζει έναν πίνακα ακεραίων από τον χρήστη και να χρησιμοποιεί τον αλγόριθμο Selection Sort για να τον ταξινομήσει. Στη συνέχεια, εμφανίστε τον ταξινομημένο πίνακα.
+
+    static void selectionSort(int[] myArray)
+    {
+        int n = myArray.Length;
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            int minNumber = i;
+            for (int j = i + 1; j < n; j++)
+            {
+                if (myArray[j] < myArray[minNumber])
+                {
+
+                    minNumber = j;
+                }
+            }
+            int temp = myArray[minNumber];
+            myArray[i] = myArray[minNumber];
+            myArray[minNumber] = temp;
+        }
+    }
+
+
+    static void Main()
+    {
+
+        Console.WriteLine("give the number length of the array");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        int[] myArray = new int[userInput];
+
+
+        Console.WriteLine("Give thn numbers of the array");
+        for (int i = 0; i < userInput; i++)
+        {
+            myArray[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+
+        selectionSort(myArray);
+
+        Console.WriteLine("ταξινομηση πινακα");
+        foreach (int elements in myArray)
+        {
+
+            Console.WriteLine(elements+ " ");
+            
+
+        }
+        Console.ReadLine();
+    }
+}
+
+
+      //  Console.WriteLine();
+      //  Console.ReadLine();
+    

@@ -1,0 +1,41 @@
+
+Άσκηση 4: Ταξινόμηση Πίνακα Χαρακτήρων
+
+Γράψτε ένα πρόγραμμα που να ταξινομεί έναν πίνακα χαρακτήρων σε αλφαβητική σειρά χρησιμοποιώντας τον αλγόριθμο Selection Sort.
+
+csharp
+
+using System;
+
+class Program
+{
+    static void SelectionSort(char[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[j] < arr[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+            char temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
+    static void Main()
+    {
+        char[] arr = { 'd', 'a', 'c', 'b', 'e' };
+        SelectionSort(arr);
+        Console.WriteLine("Ταξινομημένος πίνακας χαρακτήρων:");
+        foreach (var item in arr)
+        {
+            Console.Write(item + " ");
+        }
+    }
+}

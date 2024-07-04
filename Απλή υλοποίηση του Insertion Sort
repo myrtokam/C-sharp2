@@ -1,0 +1,51 @@
+//### Παράδειγμα 1: Απλή υλοποίηση του Insertion Sort
+
+
+ 
+//Αυτό το παράδειγμα δείχνει τον βασικό τρόπο υλοποίησης του Insertion Sort σε έναν πίνακα ακέραιων αριθμών.
+
+
+
+
+using System;
+ 
+class InsertionSortExample
+{
+    static void Main(string[] args)
+    {
+        int[] numbers = { 5, 2, 9, 1, 5, 6 };
+        Console.WriteLine("Πριν την ταξινόμηση:");
+        PrintArray(numbers);
+ 
+        InsertionSort(numbers);
+ 
+        Console.WriteLine("Μετά την ταξινόμηση:");
+        PrintArray(numbers);
+    }
+ 
+    static void InsertionSort(int[] array)
+    {
+        for (int i = 1; i < array.Length; i++)
+        {
+            int key = array[i];
+            int j = i - 1;
+ 
+            while (j >= 0 && array[j] > key)
+            {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+        }
+    }
+ 
+    static void PrintArray(int[] array)
+    {
+        foreach (int item in array)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
